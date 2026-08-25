@@ -1,0 +1,48 @@
+@import "../mint/mint.css";
+
+:root {
+  --sidebar-width--expanded: 225px;
+}
+
+.app-navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: black;
+  color: white;
+}
+
+.app-main {
+  padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    margin-left: var(--sidebar-width--expanded);
+  }
+}
+
+.app-sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .app-sidebar {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--sidebar-width--expanded);
+    padding-top: 4rem;
+    overflow-y: auto;
+    background-color: green;
+  }
+}
+
+.app-footer {
+  background-color: #f0fdf4;
+}
+

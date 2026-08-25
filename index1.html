@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./mint/index.css" />
+    <link rel="stylesheet" href="./layout/index1.css" />
+    <link rel="stylesheet" href="./components/tab-list/index.css" />
+
+    <script src="./lib/jquery-4.0.0.min.js"></script>
   </head>
   <body>
     <div id="root">
@@ -18,15 +21,23 @@
           </nav>
         </header>
         <main class="app-main grow min-h-screen flex flex-col">
-          <div class="app-sidebar">
-            default sidebar
-          </div>
-          <div class="app-content grow">
-            default main
-          </div>
-          <footer class="app-footer w-full text-center py-2">default footer</footer>
+          <div class="app-sidebar">SIDEBAR</div>
+          <div class="app-content grow">CONTENT</div>
+          <footer class="app-footer w-full text-center py-2">FOOTER</footer>
         </main>
       </div>
     </div>
   </body>
+  <script>
+    function loadContent(url) {
+      $(".app-content").load(url);
+    }
+
+    function onInit() {
+      // loadContent("./components/tab-list/index.html");
+    }
+
+    onInit();
+  </script>
 </html>
+  

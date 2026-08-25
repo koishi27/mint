@@ -1,19 +1,13 @@
+@import "../mint/mint.css";
 
 :root {
   --sidebar-width--expanded: 225px;
 }
 
 .app-navbar {
-  position: fixed;
   width: 100%;
-  top: 0;
-  z-index: 2;
   background-color: black;
   color: white;
-}
-
-.app-main {
-  padding-top: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -35,10 +29,13 @@
     left: 0;
     height: 100%;
     width: var(--sidebar-width--expanded);
-    padding-top: 5rem;
     overflow-y: auto;
     background-color: green;
   }
+}
+
+.app-sidebar-header {
+  background-color: grey;
 }
 
 .app-footer {

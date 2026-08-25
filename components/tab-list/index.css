@@ -1,0 +1,36 @@
+.tab-wrapper input[type="radio"] {
+    display: none;
+}
+
+.tab-wrapper .tab-list {
+  display: flex;
+    border-bottom: 0.5px solid #E0E0E0;
+}
+
+.tab-wrapper .tab-item {
+    font-family: 'Inter-Bold';
+    font-size: 14px;
+    line-height: 100%;
+    color: #7B7B7B;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.tab-wrapper #tab1:checked ~ .tab-list label[for="tab1"],
+.tab-wrapper #tab2:checked ~ .tab-list label[for="tab2"] {
+    color: #DA2021;
+    background-color: #FFF6F6;
+    border-bottom: 2px solid #DA2021;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab-wrapper #tab1:checked ~ .tab-content .tab1,
+.tab-wrapper #tab2:checked ~ .tab-content .tab2 {
+    display: block;
+}
+.tab-wrapper .tab-content .tab1,
+.tab-wrapper .tab-content .tab2 {
+    display: none;
+}
