@@ -1,0 +1,79 @@
+/* ============================================================
+  COMPONENTS
+  ------------------------------------------------------------
+  Small reusable components, using familiar Tailwind names.
+  Add more components here as your project grows.
+  ============================================================ */
+@layer components {
+
+  /* ============================================================
+    INPUT ICONS
+    ------------------------------------------------------------
+    Input and textarea components with leading and trailing icons.
+    ============================================================ */
+  .input-icon,
+  .textarea-icon {
+    position: relative;
+    width: 100%;
+  }
+
+  .input-icon input,
+  .textarea-icon textarea {
+    width: 100%;
+  }
+
+  .input-icon.leading-icon input,
+  .textarea-icon.leading-icon textarea {
+    padding-left: 38px;
+    padding-right: 10px;
+  }
+
+  .input-icon.trailing-icon input {
+    padding-right: 35px;
+  }
+
+  .input-icon.leading-icon::before,
+  .textarea-icon.leading-icon::before {
+    content: "";
+    background-size: contain;
+    position: absolute;
+    left: 12px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .input-icon.leading-icon::before {
+    width: 16px;
+    height: 16px;
+    top: 50%;
+  }
+
+  .textarea-icon.leading-icon::before {
+    width: 20px;
+    height: 20px;
+    top: 18%;
+  }
+
+  .input-icon.trailing-icon::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /*    
+    .input-icon.leading-icon.input-icon--user::before {
+        background-image: url("/assets/media/icons/input-user.svg");
+    }
+    .input-icon.trailing-icon.input-icon--user::after {
+        background-image: url("/assets/media/icons/input-user.svg");
+    }
+  */
+}
